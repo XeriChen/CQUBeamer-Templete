@@ -4,5 +4,9 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"latex-workshop.formatting.latex": "latexindent",
+		"latex-workshop.formatting.latexindent.path": "D:\\Users\\83501\\texlive\\2024\\texmf-dist\\scripts\\latexindent\\latexindent.pl",
+		"latex-workshop.latex.autoBuild.run": "never"
+	}
 }

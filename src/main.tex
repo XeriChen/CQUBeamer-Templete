@@ -1,0 +1,109 @@
+% !TEX program = xelatex
+
+\documentclass[12pt,aspectratio=169,UTF8]{beamer}
+\usefonttheme[onlymath]{serif}		
+\usepackage{cqubeamer}  % cqu beamer template
+
+\usepackage{ctex}
+\setCJKfamilyfont{hwxk}{heiti}  
+
+%\usepackage{xeCJK} %设置中文字体
+%\setCJKmainfont{heiti} %xeCJK宏包下设置全局默认中文字体，默认为楷体STKaiti
+
+\usepackage{amsmath,amsfonts,amssymb,bm}   % 数学公式字体宏包
+
+\usepackage{xcolor}			               % 颜色宏包
+\definecolor{cqu_blue}{RGB}{36,72,164}     % 自定义颜色
+\usepackage{adjustbox}
+
+\usepackage{listings}                      % 列表环境
+\usepackage{verbatim}
+
+\usepackage{subcaption}
+
+\usepackage[listings]{tcolorbox}
+\newtcbox{\mybox}{colback=red!5!white,colframe=green}
+\tcbuselibrary{breakable}                  % tcolorbox 跨页显示
+\usepackage{graphicx,url}
+
+\usepackage{fontawesome}                   % 矢量图标库宏包
+\usepackage{multicol}                      % 多栏显示宏包
+
+\graphicspath{{figure/}} % 定义所有的图片文件在 figure目录下
+
+
+
+\pdfbookmark[1]{CQU Beamer Template}{title} % "1" = section level,书签标题
+\beamertemplatenavigationsymbolsempty
+
+\title{总标题}
+\author{陈骁睿}
+\date{\today}
+\institute{重庆大学物理学院}
+\begin{document}
+
+% 标题页
+\begin{frame}[plain]
+  \begin{center}
+      \includegraphics[width=0.4\textwidth]{校徽+中英文校名_蓝色.pdf}
+  \end{center}
+  \titlepage
+\end{frame}
+\setcounter{framenumber}{0}
+
+% % 目录页
+\section*{}
+\begin{frame}{目录}
+  \begin{multicols}{2}
+    \tableofcontents[subsubsectionstyle=hide]
+  \end{multicols}
+\end{frame}
+
+% % 正文
+\section{部分1}
+\subsection{小节}
+
+\begin{frame}
+  \frametitle{页标题}
+  \centering
+    这里是正文内容
+
+\end{frame}
+
+
+\section{总结与感悟}
+\subsection{总结}
+\begin{frame}
+  \frametitle{总结：我是菜鸡}
+  \begin{itemize}
+    \item 第一行
+    \item 第二行
+  \end{itemize}
+\end{frame}
+
+\appendix
+
+\section*{backup}
+
+\begin{frame}{结束}
+  \vskip20pt
+  \begin{center}
+    \Huge{谢谢！\\ 欢迎批评指正！}
+  \end{center}
+  \vskip20pt
+  \begin{table}
+    \begin{tabular}{l}
+      Chen Xiaorui (陈骁睿)                                                                                        \\
+      {\color{blue}\faGraduationCap}\hspace{0.1cm}  Student of Physics, Chongqing University                    \\
+      %\hspace{0.28cm} No.83 Shabei Street, Shapingba District \\
+      {\color{blue}\faMapMarker}\hspace{0.28cm} Chongqing, 400045, P. R. China                                  \\
+      {\color{blue}\faEnvelopeO}\hspace{0.1cm} {\href{mailto:20225847@stu.cqu.edu.cn}{20225847@stu.cqu.edu.cn}} \\
+      {\color{blue}\faGithub}\hspace{0.1cm} {\href{https://github.com/XeriChen}{XeriChen}}                      \\
+    \end{tabular}
+  \end{table}%
+  % \begin{picture}(0,0)
+  %   \put(30,8){\includegraphics[width=0.16\textwidth]{Wechat.png}}%
+  % \end{picture}
+\end{frame}
+
+\end{document}
